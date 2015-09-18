@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>NG Animate</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-animate.min.js"></script>
+
+		<script src="app.js"></script>
+	</head>
+	<body class="container" ng-app="app" ng-controller="MainCtrl">
+
+	 <header class="text-center">
+		<h3>Animating Angular Apps<small>ngShow and ngHide</small></h3>
+
+		<a class="btn btn-primary" href="#" ng-click="saturn = !saturn" ng-class="{ active: saturn }"> Toggle Saturn</a>
+		<a class="btn btn-secondary" href="#" ng-click="neptune = !neptune" ng-class="{ active: neptune }">Toggle Neptune</a>
+	 </header>
+
+	 <div class="row">
+	 	<div class="col-xs-6">
+
+	 		<div class="jumbotron" ng-show="saturn">
+	 			<img src="http://nssdc.gsfc.nasa.gov/planetary/image/saturn_voy2.jpg" class="img-responsive img-thumbnail">
+	 		</div>
+ 		</div>
+ 		<div class="col-xs-6">
+
+ 			<div class="jumbotron" ng-show="neptune">
+ 				<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Neptune_storms.jpg" class="img-responsive img-thumbnail">
+			</div>
+
+		</div>
+	</div>
+
+	</body>
+</html>
+
+	<!--
+	<body ng-app="app" ng-controller="MainCtrl">
+		<h3>Animate</h3>
+		<div class="box-one" ng-show={{ test.showBoxOne }}>
+			Hi! This is box one <b>box one</b>.
+		</div>
+	</body>
+	-->
